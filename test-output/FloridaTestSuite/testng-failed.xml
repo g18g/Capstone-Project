@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [FloridaTestSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="FloridaTests(failed)">
+    <classes>
+      <class name="Crossbrowser.CrossBrowserTesting">
+        <methods>
+          <include name="searchbar"/>
+          <include name="programsandservices"/>
+          <include name="invalidusernamelogin"/>
+          <include name="navigationmenu"/>
+          <include name="register"/>
+          <include name="login"/>
+          <include name="invalidpasslogin"/>
+          <include name="tearDown"/>
+          <include name="forgotpassword"/>
+          <include name="setup"/>
+          <include name="validateContactUs"/>
+        </methods>
+      </class> <!-- Crossbrowser.CrossBrowserTesting -->
+    </classes>
+  </test> <!-- FloridaTests(failed) -->
+  <test thread-count="5" name="FloridaTestChrome(failed)">
+    <parameter name="browserName" value="chrome"/>
+    <classes>
+      <class name="Crossbrowser.CrossBrowserTesting">
+        <methods>
+          <include name="programsandservices"/>
+          <include name="register" invocation-numbers="0"/>
+          <include name="tearDown"/>
+          <include name="setup"/>
+        </methods>
+      </class> <!-- Crossbrowser.CrossBrowserTesting -->
+    </classes>
+  </test> <!-- FloridaTestChrome(failed) -->
+  <test thread-count="5" name="HomeTestFirefox(failed)">
+    <parameter name="browserName" value="firefox"/>
+    <classes>
+      <class name="Crossbrowser.CrossBrowserTesting">
+        <methods>
+          <include name="searchbar"/>
+          <include name="programsandservices"/>
+          <include name="invalidusernamelogin"/>
+          <include name="navigationmenu"/>
+          <include name="register"/>
+          <include name="invalidpasslogin"/>
+          <include name="login"/>
+          <include name="tearDown"/>
+          <include name="validateContactUs"/>
+          <include name="setup"/>
+          <include name="forgotpassword"/>
+        </methods>
+      </class> <!-- Crossbrowser.CrossBrowserTesting -->
+    </classes>
+  </test> <!-- HomeTestFirefox(failed) -->
+</suite> <!-- Failed suite [FloridaTestSuite] -->

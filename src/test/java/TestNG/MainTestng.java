@@ -4,6 +4,7 @@ import static org.testng.Assert.assertEquals;
 import java.io.*;
 import java.time.Duration;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.*;
@@ -21,7 +22,7 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 @Listeners(TestNG.ExtentReportListener.class)
-public class Homepagetesting {
+public class MainTestng {
 	
     WebDriver driver;
     Actions link;
@@ -53,9 +54,9 @@ public class Homepagetesting {
 //	         PrintStream chromeLogStream = new PrintStream(new FileWriter(chromeLogFile, true));
 //	         System.setOut(chromeLogStream); 
 		}
-		//else if (browser.equalsIgnoreCase("firefox"))
+		else if (browser.equalsIgnoreCase("firefox"))
 		//{
-		   // driver = new FirefoxDriver();
+		    driver = new FirefoxDriver();
 //		    File firefoxLogFile = new File("firefox_log.txt");
 //            PrintStream firefoxLogStream = new PrintStream(new FileWriter(firefoxLogFile, true));
 //            System.setOut(firefoxLogStream); 
@@ -109,7 +110,8 @@ public class Homepagetesting {
 				menu = driver.findElement(By.partialLinkText("ABOUT"));
 				link.moveToElement(menu).perform();
 				options=driver.findElements(By.xpath("//li[@id='menu-item-616']//ul[@class='sub-menu']//a"));
-			}
+				driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS)
+;			}
 			System.out.println("\nABOUT page is working ");
 			System.out.println();
 			
@@ -275,8 +277,9 @@ public class Homepagetesting {
 				driver.navigate().back();
 				System.out.println("Systems Change page is working");
 				
-	        //Training			
-				driver.findElement(By.xpath("//*[@id=\"post-340\"]/div/div/div/div/div/div[1]/div[3]/div/a")).click();
+	        //Training	
+				  
+				driver.findElement(By.xpath("//*[@id=\"post-340\"]/div/div/div/div/div/div[1]/div[3]/div/div[1]/a")).click();
 				Assert.assertTrue(driver.getTitle().contains("Training"),"Training page failed");
 				takess("Training");
 				driver.navigate().back();
@@ -285,7 +288,7 @@ public class Homepagetesting {
 			break;
 			
 		}
-		System.out.println("Contents in Tobacco Page are working ");
+		System.out.println("Options in Tobacco Page are working ");
 		driver.get(homepage);
 		
 	}

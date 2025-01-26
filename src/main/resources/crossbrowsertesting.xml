@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="FloridaTestSuite" parallel="false">
+
+    <test name="FloridaTests">
+        <classes>
+            <class name="Crossbrowser.CrossBrowserTesting"/>
+        </classes>
+    </test>
+
+    <!-- Test for Chrome browser -->
+    <test name="FloridaTestChrome" preserve-order="true">
+        <parameter name="browserName" value="chrome"/> <!-- For Chrome -->
+        <classes>
+            <class name="Crossbrowser.CrossBrowserTesting"/>
+        </classes>
+    </test>
+
+    <!-- Test for Firefox browser -->
+    <test name="HomeTestFirefox" preserve-order="true">
+        <parameter name="browserName" value="firefox"/> <!-- For Firefox -->
+        <classes>
+            <class name="Crossbrowser.CrossBrowserTesting"/>
+        </classes>
+    </test>
+ 
+  
+</suite>
