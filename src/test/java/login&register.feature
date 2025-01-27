@@ -13,7 +13,16 @@ Examples: Registration Example
  | username | emailid             | password       |
  | Jason789  | jason178@gmail.com   | Jason19123!    |
  
+@login
+Scenario: User Login
+Given to "MY ACCOUNT" page
+When details "<username>", "<password>" into the form
+And click login
+Then redirected to "<username>" login dashboard
 
+Examples: Login Example
+ | username | password     |
+ | Mike24   | Mike24123!   |
 
 @Already_exist 
 Scenario: Already exist in register form

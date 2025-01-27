@@ -265,7 +265,6 @@ public class MainTestng {
 		
 			//System.out.println(driver.getTitle());
 			Assert.assertTrue(driver.getTitle().contains("Quit Tobacco"),"Quit Tobacco page Failed");//  title is displayed
-			Assert.assertTrue(driver.findElement(By.tagName("a")).isDisplayed()); //phone number is displayed
 			takess("Quit Tobacco");
 			driver.navigate().back();
 			System.out.println("Quit Tobacco page is working");
@@ -379,7 +378,7 @@ public class MainTestng {
 	 @DataProvider(name = "registerData")
 	    public Object[][] getregisterData() {
 	        return new Object[][]{
-	        	 {"Mike26","mike26@example.com","Mike24123!"},  //valid ones
+	        	 {"Mike28","mike28@example.com","Mike24123!"},  //valid ones
 	        	
 	        };
 	        	

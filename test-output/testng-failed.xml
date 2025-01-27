@@ -9,16 +9,9 @@
     <classes>
       <class name="TestNG.MainTestng">
         <methods>
-          <include name="validateContactUs"/>
           <include name="setup"/>
-          <include name="navigationmenu"/>
-          <include name="register" invocation-numbers="0"/>
           <include name="tearDown"/>
-          <include name="invalidpasslogin"/>
-          <include name="login" invocation-numbers="0"/>
-          <include name="forgotpassword"/>
-          <include name="searchbar"/>
-          <include name="invalidusernamelogin"/>
+          <include name="programsandservices"/>
         </methods>
       </class> <!-- TestNG.MainTestng -->
     </classes>
